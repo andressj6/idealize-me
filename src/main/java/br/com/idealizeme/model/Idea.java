@@ -17,21 +17,35 @@ public class Idea implements Serializable{
     @Id
     @GeneratedValue
     private Long id;
-    private Text ideaPitch;
+    @Column(columnDefinition = "text")
+    private String ideaPitch;
     private String ideaName;
-    private Text ideaProblem;
-    private Text ideaSolution;
-    private Text marketTarget;
-    private Text marketCompetion;
-    private Text marketAdvantage;
-    private Text productUseCases;
-    private Text productFeatures;
-    private Text productBrand;
-    private Text businessMonetization;
-    private Text businessDistribution;
-    private Text businessFinancials;
-    private Text executionPeople;
-    private Text executionMilestones;
+    @Column(columnDefinition = "text")
+    private String ideaProblem;
+    @Column(columnDefinition = "text")
+    private String ideaSolution;
+    @Column(columnDefinition = "text")
+    private String marketTarget;
+    @Column(columnDefinition = "text")
+    private String marketCompetion;
+    @Column(columnDefinition = "text")
+    private String marketAdvantage;
+    @Column(columnDefinition = "text")
+    private String productUseCases;
+    @Column(columnDefinition = "text")
+    private String productFeatures;
+    @Column(columnDefinition = "text")
+    private String productBrand;
+    @Column(columnDefinition = "text")
+    private String businessMonetization;
+    @Column(columnDefinition = "text")
+    private String businessDistribution;
+    @Column(columnDefinition = "text")
+    private String businessFinancials;
+    @Column(columnDefinition = "text")
+    private String executionPeople;
+    @Column(columnDefinition = "text")
+    private String executionMilestones;
     @ManyToOne
     private User owner;
     @OneToMany
@@ -45,11 +59,11 @@ public class Idea implements Serializable{
         this.id = id;
     }
 
-    public Text getIdeaPitch() {
+    public String getIdeaPitch() {
         return ideaPitch;
     }
 
-    public void setIdeaPitch(Text ideaPitch) {
+    public void setIdeaPitch(String ideaPitch) {
         this.ideaPitch = ideaPitch;
     }
 
@@ -59,110 +73,6 @@ public class Idea implements Serializable{
 
     public void setIdeaName(String ideaName) {
         this.ideaName = ideaName;
-    }
-
-    public Text getIdeaProblem() {
-        return ideaProblem;
-    }
-
-    public void setIdeaProblem(Text ideaProblem) {
-        this.ideaProblem = ideaProblem;
-    }
-
-    public Text getIdeaSolution() {
-        return ideaSolution;
-    }
-
-    public void setIdeaSolution(Text ideaSolution) {
-        this.ideaSolution = ideaSolution;
-    }
-
-    public Text getMarketTarget() {
-        return marketTarget;
-    }
-
-    public void setMarketTarget(Text marketTarget) {
-        this.marketTarget = marketTarget;
-    }
-
-    public Text getMarketCompetion() {
-        return marketCompetion;
-    }
-
-    public void setMarketCompetion(Text marketCompetion) {
-        this.marketCompetion = marketCompetion;
-    }
-
-    public Text getMarketAdvantage() {
-        return marketAdvantage;
-    }
-
-    public void setMarketAdvantage(Text marketAdvantage) {
-        this.marketAdvantage = marketAdvantage;
-    }
-
-    public Text getProductUseCases() {
-        return productUseCases;
-    }
-
-    public void setProductUseCases(Text productUseCases) {
-        this.productUseCases = productUseCases;
-    }
-
-    public Text getProductFeatures() {
-        return productFeatures;
-    }
-
-    public void setProductFeatures(Text productFeatures) {
-        this.productFeatures = productFeatures;
-    }
-
-    public Text getProductBrand() {
-        return productBrand;
-    }
-
-    public void setProductBrand(Text productBrand) {
-        this.productBrand = productBrand;
-    }
-
-    public Text getBusinessMonetization() {
-        return businessMonetization;
-    }
-
-    public void setBusinessMonetization(Text businessMonetization) {
-        this.businessMonetization = businessMonetization;
-    }
-
-    public Text getBusinessDistribution() {
-        return businessDistribution;
-    }
-
-    public void setBusinessDistribution(Text businessDistribution) {
-        this.businessDistribution = businessDistribution;
-    }
-
-    public Text getBusinessFinancials() {
-        return businessFinancials;
-    }
-
-    public void setBusinessFinancials(Text businessFinancials) {
-        this.businessFinancials = businessFinancials;
-    }
-
-    public Text getExecutionPeople() {
-        return executionPeople;
-    }
-
-    public void setExecutionPeople(Text executionPeople) {
-        this.executionPeople = executionPeople;
-    }
-
-    public Text getExecutionMilestones() {
-        return executionMilestones;
-    }
-
-    public void setExecutionMilestones(Text executionMilestones) {
-        this.executionMilestones = executionMilestones;
     }
 
     public User getOwner() {
@@ -179,5 +89,109 @@ public class Idea implements Serializable{
 
     public void setHelpers(List<User> helpers) {
         this.helpers = helpers;
+    }
+
+    public String getIdeaProblem() {
+        return ideaProblem;
+    }
+
+    public void setIdeaProblem(String ideaProblem) {
+        this.ideaProblem = ideaProblem;
+    }
+
+    public String getIdeaSolution() {
+        return ideaSolution;
+    }
+
+    public void setIdeaSolution(String ideaSolution) {
+        this.ideaSolution = ideaSolution;
+    }
+
+    public String getMarketTarget() {
+        return marketTarget;
+    }
+
+    public void setMarketTarget(String marketTarget) {
+        this.marketTarget = marketTarget;
+    }
+
+    public String getMarketCompetion() {
+        return marketCompetion;
+    }
+
+    public void setMarketCompetion(String marketCompetion) {
+        this.marketCompetion = marketCompetion;
+    }
+
+    public String getMarketAdvantage() {
+        return marketAdvantage;
+    }
+
+    public void setMarketAdvantage(String marketAdvantage) {
+        this.marketAdvantage = marketAdvantage;
+    }
+
+    public String getProductUseCases() {
+        return productUseCases;
+    }
+
+    public void setProductUseCases(String productUseCases) {
+        this.productUseCases = productUseCases;
+    }
+
+    public String getProductFeatures() {
+        return productFeatures;
+    }
+
+    public void setProductFeatures(String productFeatures) {
+        this.productFeatures = productFeatures;
+    }
+
+    public String getProductBrand() {
+        return productBrand;
+    }
+
+    public void setProductBrand(String productBrand) {
+        this.productBrand = productBrand;
+    }
+
+    public String getBusinessMonetization() {
+        return businessMonetization;
+    }
+
+    public void setBusinessMonetization(String businessMonetization) {
+        this.businessMonetization = businessMonetization;
+    }
+
+    public String getBusinessDistribution() {
+        return businessDistribution;
+    }
+
+    public void setBusinessDistribution(String businessDistribution) {
+        this.businessDistribution = businessDistribution;
+    }
+
+    public String getBusinessFinancials() {
+        return businessFinancials;
+    }
+
+    public void setBusinessFinancials(String businessFinancials) {
+        this.businessFinancials = businessFinancials;
+    }
+
+    public String getExecutionPeople() {
+        return executionPeople;
+    }
+
+    public void setExecutionPeople(String executionPeople) {
+        this.executionPeople = executionPeople;
+    }
+
+    public String getExecutionMilestones() {
+        return executionMilestones;
+    }
+
+    public void setExecutionMilestones(String executionMilestones) {
+        this.executionMilestones = executionMilestones;
     }
 }
