@@ -5,8 +5,12 @@
     <artifactId>idealize-me</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>idealize-me Maven Webapp</name>
+    <name>Idealize-Me </name>
     <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>br.com.caelum</groupId>
