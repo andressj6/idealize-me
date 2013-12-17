@@ -1,9 +1,6 @@
 package br.com.idealizeme.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -19,6 +16,7 @@ public class Skill implements Serializable {
     private Long id;
     private String name;
     private String description;
+    @Enumerated(EnumType.STRING)
     private Area area;
 
     public Long getId() {

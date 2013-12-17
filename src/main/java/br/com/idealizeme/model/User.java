@@ -18,8 +18,18 @@ public class User implements Serializable {
     private String name;
     private String email;
     private String password;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Skill> skills;
+
+    public User() {
+
+    }
+
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
