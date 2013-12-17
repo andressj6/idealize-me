@@ -1,5 +1,6 @@
 package br.com.idealizeme.controller;
 
+import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 
 import javax.annotation.Resource;
@@ -14,10 +15,6 @@ public class IndexController {
 
     public IndexController( Result result){
         this.result = result;
-    }
-
-    public void index(){
-
     }
 
 }
