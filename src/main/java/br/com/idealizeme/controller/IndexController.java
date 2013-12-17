@@ -1,9 +1,10 @@
 package br.com.idealizeme.controller;
 
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 
-import javax.annotation.Resource;
+import br.com.caelum.vraptor.Resource;
 
 /**
  * Created by guilherme on 16/12/13.
@@ -15,6 +16,10 @@ public class IndexController {
 
     public IndexController( Result result){
         this.result = result;
+    }
+
+    @Path("/")
+    public void index(){
     }
 
 }

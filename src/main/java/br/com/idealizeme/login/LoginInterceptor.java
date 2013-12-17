@@ -40,7 +40,7 @@ public class LoginInterceptor implements Interceptor {
         if (userSession.isLogged() || isMethodPublic) {
             is.next(rm, o);
         } else {
-            result.redirectTo(LoginController.class).login();
+            result.redirectTo("/");
         }
     }
 

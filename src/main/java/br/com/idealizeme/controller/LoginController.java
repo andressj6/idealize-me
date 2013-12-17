@@ -41,10 +41,10 @@ public class LoginController {
         User user = dao.getUserByCredentials(email, password);
         if (user != null) {
             userSession.setUser(user);
-            result.forwardTo(IdeaController.class).dashboard();
+            result.redirectTo(IdeaController.class).dashboard();
         } else {
             result.include("error", true);
-            result.forwardTo(LoginController.class).login();
+            result.redirectTo("/");
         }
     }
 
@@ -53,9 +53,9 @@ public class LoginController {
         User user = dao.getUserByCredentials(email, accessToken);
         if (user != null) {
             userSession.setUser(user);
-            result.forwardTo(IdeaController.class).dashboard();
+            result.redirectTo(IdeaController.class).dashboard();
         } else {
-            result.forwardTo(UserController.class).addUserFacebook(nome, email, accessToken);
+            result.redirectTo(UserController.class).addUserFacebook(nome, email, accessToken);
         }
     }
 
