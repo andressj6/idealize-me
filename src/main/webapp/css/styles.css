@@ -1,0 +1,21 @@
+
+
+
+#capaEsquerda{
+    float: left;
+    width: 400px;
+    margin-left: 80px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+#capaDireita{
+    float: left;
+    width: 380px;
+    margin-left: 80px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
