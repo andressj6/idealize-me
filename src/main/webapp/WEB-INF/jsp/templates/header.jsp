@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Idealize-Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap-theme.min.css" />"/>
     <link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.css" />"/>
     <script type="text/javascript" src="<c:url value="/js/bootstrap.js" />"></script>

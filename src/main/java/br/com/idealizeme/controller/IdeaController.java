@@ -1,5 +1,6 @@
 package br.com.idealizeme.controller;
 
+import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 import br.com.idealizeme.dao.IdeaDAO;
 import br.com.idealizeme.model.Idea;
@@ -18,6 +19,11 @@ public class IdeaController {
     public IdeaController(IdeaDAO dao, Result result){
         this.dao = dao;
         this.result = result;
+    }
+
+    @Path("/new/idea")
+    public void newIdea(){
+
     }
 
 }
