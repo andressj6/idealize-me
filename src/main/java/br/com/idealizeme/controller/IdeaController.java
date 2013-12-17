@@ -2,7 +2,6 @@ package br.com.idealizeme.controller;
 
 import br.com.caelum.vraptor.Result;
 import br.com.idealizeme.dao.IdeaDAO;
-import br.com.idealizeme.model.Idea;
 
 import javax.annotation.Resource;
 
@@ -20,4 +19,7 @@ public class IdeaController {
         this.result = result;
     }
 
+    public void dashboard() {
+
+    }
 }
