@@ -26,4 +26,9 @@ public class IdeaController {
 
     }
 
+    @Path("/dashboard")
+    public void dashboard(){
+
+    }
+
 }
