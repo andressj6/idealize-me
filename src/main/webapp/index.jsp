@@ -1,6 +1,6 @@
 ﻿<%@include file="WEB-INF/jsp/templates/header.jsp"%>
 <div class="jumbotron" style="text-align: center">
-    <div class="container" style="background-image: ">
+    <div class="container">
         <div id="capaEsquerda">
             <h1>Idealize.Me</h1>
 
