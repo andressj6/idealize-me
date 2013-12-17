@@ -16,4 +16,8 @@ public class IndexController {
         this.result = result;
     }
 
+    public void index(){
+
+    }
+
 }
