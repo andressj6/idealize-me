@@ -6,6 +6,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.idealizeme.dao.IdeaDAO;
 import br.com.idealizeme.login.Permission;
 import br.com.idealizeme.login.Public;
+import br.com.idealizeme.login.UserSession;
 import br.com.idealizeme.model.Idea;
 
 
@@ -18,10 +19,12 @@ public class IdeaController {
 
     private IdeaDAO dao;
     private Result result;
+    private UserSession userSession;
 
-    public IdeaController(IdeaDAO dao, Result result){
+    public IdeaController(IdeaDAO dao,UserSession userSession, Result result){
         this.dao = dao;
         this.result = result;
+        this.userSession = userSession;
     }
 
     @Path("/new")
@@ -31,7 +34,7 @@ public class IdeaController {
 
     @Path("/dashboard")
     public void dashboard(){
-
+        result.include("user", userSession.getUser());
     }
 
 }
