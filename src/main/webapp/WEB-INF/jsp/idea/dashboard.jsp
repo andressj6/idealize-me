@@ -50,13 +50,40 @@
         <hr>
         <h1>Minha Conta</h1>
         <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">
+                    <a class="btn btn-primary btn-lg" href="<c:url value="/idea/new"/>">Nova Ideia</a>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <a class="btn btn-primary btn-lg">Quero Ajudar</a>
+                </div>
+            </div>
+        </div>
+        <hr>
         <ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#MyIdeas" data-toggle="tab">Minhas ideias</a></li>
             <li><a href="#Helping" data-toggle="tab">Ideias que participo</a></li>
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane active" id="MyIdeas">...</div>
+            <div class="tab-pane active" id="MyIdeas">
+                <table class="table">
+                   <thead>
+                    <th>Nome</th>
+                    <th>Marca<th>
+                   </thead>
+                   <tbody>
+                   <c:forEach items="${ideas}" var="idea">
+                    <tr>
+                        <td>idea.ideaName</td>
+                        <td>idea.productBrand</td>
+                    </tr>
+                   </c:forEach>
+                   </tbody>
+                </table>
+
+            </div>
             <div class="tab-pane" id="Helping">...</div>
 
         </div>
